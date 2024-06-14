@@ -15,10 +15,10 @@ class PostData implements IPostData {
 
   Component(){
     return `
-      <li>
+      <div>
         <h1>${this.title}</h1>
         <p>${this.body}<p>
-      </li>
+      </div>
     `
   }
 }
