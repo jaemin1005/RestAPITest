@@ -1,6 +1,6 @@
 import { CreateElement } from "./CreateElement";
 
-class PostData implements IPostData {
+export class PostData implements IPostData {
   id: number;
   userId: number;
   title: string;
