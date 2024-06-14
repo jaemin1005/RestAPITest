@@ -1,3 +1,4 @@
+/** Element의 Interface */
 interface ICustomElement<T extends keyof HTMLElementTagNameMap> {
   elem : T;
   property? : Partial<HTMLElementTagNameMap[T]>;

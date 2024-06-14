@@ -13,6 +13,10 @@ export class PostData implements IPostData {
     this.body = body;
   }
 
+  /**
+   * * title, body 프로퍼티를 이용하여 Component를 만든다.
+   * @returns 
+   */
   Component(){
     return `
       <div>
