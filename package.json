@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-server": "tsc --project src/server/tsconfig.json && tsc-alias --project src/server/tsconfig.json",
+		"build-client": "tsc --project src/client/tsconfig.json && tsc-alias --project src/client/tsconfig.json",
+		"build-both": "npm run build-server && npm run build-client",
+		"start": "ts-node -r tsconfig-paths/register src/server/server.ts"
   },
   "author": "",
   "license": "ISC",
