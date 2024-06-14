@@ -12,4 +12,13 @@ class PostData implements IPostData {
     this.title = title;
     this.body = body;
   }
+
+  Component(){
+    return `
+      <li>
+        <h1>${this.title}</h1>
+        <p>${this.body}<p>
+      </li>
+    `
+  }
 }
