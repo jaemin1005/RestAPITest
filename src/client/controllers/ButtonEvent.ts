@@ -1,7 +1,7 @@
-import { CreateElement } from "./CreateElement";
-import { DeleteChild } from "./DeleteChild";
-import { GetData } from "./GetDataUsingRestApi";
-import { PostData } from "./PostData";
+import { CreateElement } from "../modules/CreateElement";
+import { DeleteChild } from "../modules/DeleteChild";
+import { GetData } from "../modules/GetDataUsingRestApi";
+import { PostData } from "../modules/PostData";
 
 export async function ButtonEvent(){
   const $main = document.getElementById("main")!;
