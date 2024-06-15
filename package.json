@@ -8,7 +8,9 @@
     "build-server": "tsc --project src/server/tsconfig.json && tsc-alias --project src/server/tsconfig.json",
     "build-client": "tsc --project src/client/tsconfig.json && tsc-alias --project src/client/tsconfig.json",
     "build-both": "npm run build-server && npm run build-client",
-    "start": "ts-node -r tsconfig-paths/register src/server/server.ts"
+    "start": "ts-node -r tsconfig-paths/register src/server/server.ts",
+    "build-babel": "babel src --out-dir babel --extensions .ts,.js,.tsx,.jsx,.cjs,.mjs --presets=@babel/preset-typescript,@babel/preset-env",
+    "build-tsc-babel": "tsc --project src/client/tsconfig.json && tsc-alias --project src/client/tsconfig.json && babel dist --out-dir babel --extensions .ts,.js,.tsx,.jsx,.cjs,.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -16,11 +18,17 @@
     "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
     "@babel/node": "^7.24.7",
+    "@babel/plugin-transform-runtime": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@types/node": "^20.14.2",
     "tsc-alias": "^1.8.10",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.7",
+    "@babel/runtime-corejs3": "^7.24.7",
+    "core-js": "^3.37.1"
   }
 }
