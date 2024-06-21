@@ -7,10 +7,23 @@
         "targets": {
           "esmodules": true
         },
-        "useBuiltIns": false
-        //"corejs": 3
+        "useBuiltIns": "usage",
+        "corejs": 3
       }
     ],
     "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@shared": "./src/shared"
+        }
+      }
+    ]
   ]
+  
 }
